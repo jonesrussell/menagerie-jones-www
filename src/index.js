@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Menu from './Menu';
 import Main from './Main';
 import Footer from './Footer';
@@ -8,16 +8,26 @@ import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery'
 
+const NoMatch = () => (
+  <div></div>
+)
+
 ReactDOM.render((
 	<BrowserRouter>
 		<div>
-			<Menu />
+			<Switch>
+				<Route exact path='/' component={NoMatch} />
+				<Route component={Menu} />
+			</Switch>
 			<div className="container">
 				<Main />
 			</div>
-			<Footer />	
+			<Switch>
+				<Route exact path='/' component={NoMatch} />
+				<Route component={Footer} />
+			</Switch>
 		</div>
 	</BrowserRouter>
 ), document.getElementById('body-container'));
-
+  
 registerServiceWorker();
