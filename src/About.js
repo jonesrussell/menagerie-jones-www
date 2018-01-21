@@ -26,6 +26,7 @@ class About extends Component {
 		return (
 			<div id="page-about">
 				<h1>{this.state.title}</h1>
+				<hr/>
 				{this.state.body}
 			</div>
 		)
