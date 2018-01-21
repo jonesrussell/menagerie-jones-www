@@ -2,11 +2,11 @@ import React from 'react'
 import { Button } from 'reactstrap'
 
 const Home = () => (
-	<div id="page-home">
-		<h1>Hi, my name is Russell Jones</h1>
-		<h2>I am a Software Developer / IT Manager.</h2>
+	<div id="page-home" style={{ textAlign: 'center' }}>
+		<h1>Hi, my name is <strong>Russell Jones</strong>.</h1>
+		<h2>I'm a web developer / i.t. manager.</h2>
 		<p>
-			<Button outline color="secondary" tag="a" href="/portfolio">See what I do.</Button>
+			<Button outline color="secondary" tag="a" href="/about">More about me</Button>
 		</p>
 	</div>
 )
