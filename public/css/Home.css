@@ -26,7 +26,7 @@ h1 {
 }
 
 h2 {
-	font-size: 28pt;
+	font-size: 17pt;
 	line-height: 32pt;
 }
 
@@ -43,4 +43,10 @@ strong {
 	color: white !important;
 	border-color: white !important;
 	border-width: 2px !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+	background-color: #04C2C9;
+	border-color: #04C2C9 !important;
 }
