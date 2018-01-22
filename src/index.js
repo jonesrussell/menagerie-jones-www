@@ -7,8 +7,8 @@ import Footer from './Footer';
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery'
+import Contact from './Contact'
 
-//const NoMatch = () => (
 export default class Homepage extends Component {
 	render() {
 		return (
@@ -29,6 +29,10 @@ ReactDOM.render((
 			<div className="container">
 				<Main />
 			</div>
+			<Switch>
+				<Route exact path='/' component={Homepage} />
+				<Route component={Contact} />
+			</Switch>
 			<Switch>
 				<Route exact path='/' component={Homepage} />
 				<Route component={Footer} />

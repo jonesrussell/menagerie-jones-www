@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
-import { Card, Button, CardImg, CardTitle, CardText, CardGroup,
- CardSubtitle, CardBody, Progress } from 'reactstrap';
+import { Card, Button, CardTitle, CardText, CardGroup, CardBody, Progress } from 'reactstrap';
 import 'font-awesome/css/font-awesome.min.css';
 
 class About extends Component {
