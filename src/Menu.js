@@ -42,7 +42,7 @@ class Menu extends Component {
 							<NavLink href="/portfolio">Portfolio</NavLink>
 						  </NavItem>
 						  <NavItem>
-							<NavLink href="/contact">Contact</NavLink>
+							<NavLink href="#contact-form">Contact</NavLink>
 						  </NavItem>
 						</Nav>
 					  </Collapse>

@@ -14,19 +14,33 @@ class Contact extends Component {
 
 		this.handleChange = this.handleChange.bind(this);
 		this.submitForm = this.submitForm.bind(this);
+		this.disableForm = this.disableForm.bind(this);
 	}
 
 	handleChange(event) {
 		const target = event.target;
 		const value = target.value;
 		const name = target.name;
-
+ 
 		this.setState({
 			[name]: value
 		});
+ 		let valid = value.length > 0;
+		(valid) ? target.classList.add('is-valid') : target.classList.remove('is-valid');
+		(!valid) ? target.classList.add('is-invalid') : target.classList.remove('is-invalid');
+
 	}
 
 	submitForm() {
+		console.log('bar');
+		console.log(this.state.message.length);
+		if (this.state.name.length === 0
+			|| this.state.email.length === 0
+			|| this.state.message.length === 0) {
+			console.log('foo');
+			return false;
+		}
+
 		let payload = {
 			"contact_form":[{"target_id":"feedback"}],
 			"name":[{"value": this.state.name}],
@@ -49,32 +63,44 @@ class Contact extends Component {
 			})
 			.then(function(res){ 
 				_this.setState({ sent: true });
+				_this.disableForm();
 				return res.json();
 			})
 //			.then(function(data){ console.log( JSON.stringify( data ) ) });
 	}
 
+	disableForm() {
+	 	
+	}
+
 	render() {
+		let name = this.state.name;
+		let email = this.state.email;
+		let message = this.state.message;
 		let sent = this.state.sent;
+		let disableInput = sent ? 'disabled' : '';
+
 		return (
-			<div className="contact-form-container">
+			<div id="contact-form" className="contact-form-container">
 				<div className="contact-form">
 					<h1>Contact</h1>
 					<hr />
 					<p>Get in touch.</p>
 
 					<Form>
-						<FormGroup>
-							<Label for="contact-name">Name</Label>
-							<Input type="text" name="name" id="contact-name" placeholder="Name" value={this.state.name} onChange={this.handleChange} />
-						</FormGroup>
-						<FormGroup>
-							<Label for="contact-email">Email</Label>
-							<Input type="email" name="email" id="contact-email" placeholder="Email" value={this.state.email} onChange={this.handleChange} />
-						</FormGroup>
-						<FormGroup>
-							<Label for="contact-message">Your message</Label>
-							<Input type="textarea" name="message" id="contact-message" placeholder="Your message..." value={this.state.message} onChange={this.handleChange}/>
+						<FormGroup tag="fieldset">
+							<FormGroup>
+								<Label for="contact-name">Name</Label>
+								<Input type="text" name="name" id="contact-name" placeholder="Name" value={name} onChange={this.handleChange} disabled={disableInput} />
+							</FormGroup>
+							<FormGroup>
+								<Label for="contact-email">Email</Label>
+								<Input type="email" name="email" id="contact-email" placeholder="Email" value={email} onChange={this.handleChange} disabled={disableInput} />
+							</FormGroup>
+							<FormGroup>
+								<Label for="contact-message">Your message</Label>
+								<Input type="textarea" name="message" id="contact-message" placeholder="Your message..." value={message} onChange={this.handleChange} disabled={disableInput} />
+							</FormGroup>
 						</FormGroup>
 						<div>
 							{
