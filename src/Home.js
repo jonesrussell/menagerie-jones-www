@@ -3,6 +3,9 @@ import { Button } from 'reactstrap'
 
 const Home = () => (
 	<div id="page-home" style={{ textAlign: 'center' }}>
+		<div className="portrait">
+			<img src="images/russell-jones.png" alt="Russell Jones" />
+		</div>
 		<h1>Hi, my name is <strong>Russell Jones</strong>.</h1>
 		<h2>I'm a web developer / i.t. manager.</h2>
 		<p>

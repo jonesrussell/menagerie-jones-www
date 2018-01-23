@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Playfair+Display');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
-h1 {
-	font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
+body {
+	font-family: 'Raleway', sans-serif !important;
+}
+
+main h1 {
+    font-weight: bold !important;
     line-height: 46px;
     font-size: 46px;
     margin: 0 0 43px 0;
+	text-transform: uppercase;
+	color: #444649 !important;
 }
 
 h2 {
-	font-family: 'Open Sans', serif;
     font-weight: normal;
     font-size: 21px;
     line-height: 23px;
@@ -19,10 +23,178 @@ h2 {
     margin: 0 0 23px 0;
 }
 
+h4 {
+	font-weight: bold !important;
+	color: #616161 !important;
+}
+
 p {
-	font-family: 'Roboto', sans-serif;`
-    font-size: 15px;
+	color: #616161 !important;
+    font-size: 12pt !important;
     line-height: 23px;
     margin: 0 0 23px 0;
 }
 
+nav.navbar {
+	background-color: rgb(27, 36, 47) !important;
+	height: 50px;
+	border-bottom: 3px solid #04C2C9;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.navbar ul.ml-auto {
+	margin-left: 0 !important;
+}
+
+.navbar-brand, 
+.navbar-dark .navbar-nav .nav-link {
+	color: #FFFFFF !important;
+	font-size: 12pt;
+}
+
+main {
+	text-align: center;
+	padding: 50px 0;
+}
+
+hr {
+	background-color: #444649;
+    height: 3px !important;
+    width: 70px;
+}
+
+footer.bg-dark {
+	background-color: rgb(27, 36, 47) !important;
+}
+
+.card-group {
+	margin: 40px 0;
+}
+
+.card {
+	border: none !important;
+}
+
+.main-body {
+	margin-top: 25px;
+}
+
+.fa {
+	color: #04C2C9;
+}
+
+.portrait-col {
+	text-align: center;
+}
+
+.portrait {
+	border: 2px solid rgb(27, 36, 47); 
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 0 auto 25px;
+}
+
+.portrait img {
+	width: auto;
+	height: 100%;
+	margin-left: -30px;
+}
+
+.skill-list-item {
+	display: flex;
+	background-color: #EEEEEE;
+	margin-bottom: 10px;
+}
+
+.skill-list-item div.skill {
+	width: 25%;
+	background-color: #04C2C9;
+	color: #FFF;
+	font-weight: bold;
+	padding-top: 4px;
+	font-size: 11pt;
+}
+
+.skill-list-item .progress {
+	width: 75%;
+	height: 28px !important;
+	border-radius: 0 !important;
+	font-size: 11pt;
+}
+
+.skill-list-item .progress-bar {
+	background-color: #00A1A7;
+}
+
+.skill-list-container {
+	margin-bottom: 40px;
+}
+
+.btn-primary {
+	background-color: #04C2C9 !important;
+	border-color: #04C2C9 !important;
+}
+
+/* Contact form */
+.contact-form-container {
+	background-color: #252934;
+	padding: 20px 0 100px 0;
+}
+
+.contact-form {
+	color: #04C2C9 !important;
+	width: 30%;
+	margin: 40px auto;
+	text-align: center;
+}
+
+.contact-form-sent {
+	background-color: #E31B6D;
+	color: #FFF;
+	padding: 10px 5px;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+	background-color: #1E242C;
+	border-radius: 0;
+	border: 1px solid #1E242C;
+}
+
+.contact-form h1 {
+	color: #FFF;
+	text-transform: uppercase;
+}
+
+.contact-form hr {
+	background-color: #FFF;
+}
+
+.contact-form p {
+	color: #04C2C9 !important;
+	font-size: 12pt !important;
+	font-weight: 600;
+	margin: 40px 0;
+}
+
+.contact-form label {
+	display: none;
+}
+
+.contact-form textarea {
+	height: 100px;
+}
+
+.contact-form a.btn {
+	color: #FFF !important;
+	float: right;
+}
+
+/* Global forms */
+.is-valid {
+	border: 1px solid #28a745;
+}
