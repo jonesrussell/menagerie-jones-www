@@ -39,7 +39,7 @@ class Menu extends Component {
 							<NavLink href="/about">About</NavLink>
 						  </NavItem>
 						  <NavItem>
-							<NavLink href="/portfolio">Portfolio</NavLink>
+							<NavLink href="/projects">Projects</NavLink>
 						  </NavItem>
 						  <NavItem>
 							<NavLink href="#contact-form">Contact</NavLink>

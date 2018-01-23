@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
 
-class Portfolio extends Component {
+class Projects extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -24,7 +24,7 @@ class Portfolio extends Component {
 
 	render() {
 		return (
-			<div id="page-portfolio">
+			<div id="page-projects">
 				<h1>{this.state.title}</h1>
 				<hr/>
 				{this.state.body}
@@ -33,4 +33,4 @@ class Portfolio extends Component {
 	}
 }
 
-export default Portfolio 
+export default Projects 
