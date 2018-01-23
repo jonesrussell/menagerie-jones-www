@@ -28,6 +28,14 @@ class Projects extends Component {
 				<h1>{this.state.title}</h1>
 				<hr/>
 				{this.state.body}
+				<div className="row">
+					<div className="col-md-7" style={{ overflow: 'hidden' }}><img src="http://placehold.it/700x300"/></div>
+					<div className="col-md-5">
+						<h3>Project One</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+						<button className="btn btn-primary">Details</button>
+					</div>
+				</div>
 			</div>
 		)
 	}
