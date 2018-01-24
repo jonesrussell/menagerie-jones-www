@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import Home from './Home'
 import About from './About'
 import Projects from './Projects'
+import './Main.scss'
 
 // The Main component renders one of the three provided
 // Routes (provided that one matches). Both the /roster

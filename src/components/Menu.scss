@@ -1,0 +1,19 @@
+/* Menu.scss */
+nav.navbar {
+	background-color: rgb(27, 36, 47) !important;
+	height: 50px;
+	border-bottom: 3px solid #04C2C9;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.navbar ul.ml-auto {
+	margin-left: 0 !important;
+}
+
+.navbar-brand, 
+.navbar-dark .navbar-nav .nav-link {
+	color: #FFFFFF !important;
+	font-size: 12pt;
+}
+
