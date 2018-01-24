@@ -5,14 +5,22 @@ class Contact extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			//name: { value: '', valid: null },
+			//email: { value: '', valid: null },
+			//message: { value: '', valid: null },
 			name: '',
+			nameIsValid: null,
 			email: '',
-			subject: 'Menagerie Jones',
+			emailValid: null,
 			message: '',
+			messageValid: null,	
+			subject: 'Menagerie Jones', // @TODO set this in env
 			sent: false
 		};
 
 		this.handleChange = this.handleChange.bind(this);
+		this.isEmpty = this.isEmpty.bind(this);
+		this.isEmail = this.isEmail.bind(this);
 		this.submitForm = this.submitForm.bind(this);
 		this.disableForm = this.disableForm.bind(this);
 	}
@@ -20,33 +28,50 @@ class Contact extends Component {
 	handleChange(event) {
 		const target = event.target;
 		const value = target.value;
-		const name = target.name;
  
+		console.log(target.name);
 		this.setState({
-			[name]: value
+			[target.name]: value 
 		});
- 		let valid = value.length > 0;
-		(valid) ? target.classList.add('is-valid') : target.classList.remove('is-valid');
-		(!valid) ? target.classList.add('is-invalid') : target.classList.remove('is-invalid');
 
+		let valid = !this.isEmpty(value);
+		if (target.name === 'email') {
+			valid = this.isEmail(value);
+		}
+		let cl = target.classList;
+		(valid) ? cl.add('is-valid') : cl.remove('is-valid');
+		(!valid) ? cl.add('is-invalid') : cl.remove('is-invalid');
+	}
+	
+	isEmpty(value) {
+ 		return value.length === 0;
+	}
+
+	isEmail(value) {
+		return /(.+)@(.+){2,}\.(.+){2,}/.test(value);	
 	}
 
 	submitForm() {
-		console.log('bar');
-		console.log(this.state.message.length);
-		if (this.state.name.length === 0
-			|| this.state.email.length === 0
-			|| this.state.message.length === 0) {
-			console.log('foo');
+//		this.state.submitted = true;
+
+		let name = this.state.name;
+		let email = this.state.email;
+		let subject = this.state.subject;	// hidden form field
+		let message = this.state.message;
+
+		if (this.isEmpty(name) 
+			|| this.isEmpty(email)
+			|| this.isEmpty(message)) {
+//			if (this.isEmpty(name)) { this.state.nameIsValid = false; }
 			return false;
 		}
 
 		let payload = {
 			"contact_form":[{"target_id":"feedback"}],
-			"name":[{"value": this.state.name}],
-			"mail":[{"value": this.state.email}],
-			"subject":[{"value": this.state.subject}],
-			"message":[{"value": this.state.message}]
+			"name":[{"value": name}],
+			"mail":[{"value": email}],
+			"subject":[{"value": subject}],
+			"message":[{"value": message}]
 		};
 
 		let data = JSON.stringify(payload);
@@ -79,6 +104,15 @@ class Contact extends Component {
 		let message = this.state.message;
 		let sent = this.state.sent;
 		let disableInput = sent ? 'disabled' : '';
+		let nameValid = {};
+		if (this.state.submitted) {
+			console.log('submitted');
+			if (this.state.nameIsValid) {
+				nameValid = { valid: true }
+			} else {
+				nameValid = { valid: false }
+			}
+		}
 
 		return (
 			<div id="contact-form" className="contact-form-container">
@@ -91,15 +125,15 @@ class Contact extends Component {
 						<FormGroup tag="fieldset">
 							<FormGroup>
 								<Label for="contact-name">Name</Label>
-								<Input type="text" name="name" id="contact-name" placeholder="Name" value={name} onChange={this.handleChange} disabled={disableInput} />
+								<Input {...nameValid} type="text" name="name" id="contact-name" placeholder="Name" value={this.state.name} onChange={this.handleChange} disabled={disableInput} />
 							</FormGroup>
 							<FormGroup>
 								<Label for="contact-email">Email</Label>
-								<Input type="email" name="email" id="contact-email" placeholder="Email" value={email} onChange={this.handleChange} disabled={disableInput} />
+								<Input type="email" name="email" id="contact-email" placeholder="Email" value={this.state.email} onChange={this.handleChange} disabled={disableInput} />
 							</FormGroup>
 							<FormGroup>
 								<Label for="contact-message">Your message</Label>
-								<Input type="textarea" name="message" id="contact-message" placeholder="Your message..." value={message} onChange={this.handleChange} disabled={disableInput} />
+								<Input type="textarea" name="message" id="contact-message" placeholder="Your message..." value={this.state.message} onChange={this.handleChange} disabled={disableInput} />
 							</FormGroup>
 						</FormGroup>
 						<div>
