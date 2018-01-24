@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Menu from './Menu';
-import Main from './Main';
-import Footer from './Footer';
+import Menu from './components/Menu';
+import Main from './components/Main';
+import Footer from './components/Footer';
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery'
-import Contact from './Contact'
+import Contact from './components/Contact'
 
 export default class Homepage extends Component {
 	render() {
 		return (
 			<div>
-				<link rel="stylesheet" type="text/css" href="css/Home.css"/>
 			</div>
 		)
 	}

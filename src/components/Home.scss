@@ -1,3 +1,4 @@
+/* Home.scss */
 body {
 	padding-top: 0;
 }
@@ -5,7 +6,7 @@ body {
 #body-container {
 	width: 100%;
 	height: 100%;
-	background-image: url(../images/home-background.jpg);
+	background-image: url('./images/home-background.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
