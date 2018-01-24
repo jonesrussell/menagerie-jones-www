@@ -7,7 +7,6 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
-import './Menu.scss';
 
 class Menu extends Component {
 	constructor(props) {
@@ -26,6 +25,8 @@ class Menu extends Component {
 	}
 
 	render() {
+		import('./Menu.scss');
+
 		return (
 			<div>
 				<Navbar color="faded" light expand="md" className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">

@@ -19,7 +19,7 @@ body {
 	align-items: center; /*centers items on the cross-axis (y by default)*/
 }
 
-h1, h2 { color: white !important; }
+h1, h2 { color: white; }
 
 h1 {
 	font-size: 32pt;
@@ -32,7 +32,7 @@ h2 {
 }
 
 p {
-	margin-top: 15px !important;
+	margin-top: 15px;
 }
 
 strong {
@@ -40,16 +40,16 @@ strong {
 }
 
 .btn-outline-secondary {
-	font-family: 'Roboto', sans-serif !important;
-	color: white !important;
-	border-color: white !important;
-	border-width: 2px !important;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	border-color: white;
+	border-width: 2px;
 }
 
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus {
 	background-color: #04C2C9;
-	border-color: #04C2C9 !important;
+	border-color: #04C2C9;
 }
 
 .portrait {

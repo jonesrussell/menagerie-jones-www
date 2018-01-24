@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto');
 
+$default-font: 'Raleway', sans-serif;
+
 body {
-	font-family: 'Raleway', sans-serif !important;
+	font-family: $default-font; 
     padding-top: 53px;
 }
 
@@ -12,12 +14,12 @@ body {
 }
 
 main h1 {
-    font-weight: bold !important;
+    font-weight: bold;
     line-height: 46px;
     font-size: 46px;
     margin: 0 0 43px 0;
 	text-transform: uppercase;
-	color: #444649 !important;
+	color: #444649;
 }
 
 h2 {
@@ -30,13 +32,13 @@ h2 {
 }
 
 h4 {
-	font-weight: bold !important;
-	color: #616161 !important;
+	font-weight: bold;
+	color: #616161;
 }
 
 p {
-	color: #616161 !important;
-    font-size: 12pt !important;
+	color: #616161;
+    font-size: 12pt;
     line-height: 23px;
     margin: 0 0 23px 0;
 }
@@ -48,9 +50,9 @@ main {
 
 hr {
 	background-color: #444649;
-    height: 3px !important;
+    height: 3px;
     width: 70px;
-	margin-bottom: 40px !important;
+	margin-bottom: 40px;
 }
 
 .carousel-item {
@@ -68,7 +70,7 @@ hr {
 }
 
 footer.bg-dark {
-	background-color: rgb(27, 36, 47) !important;
+	background-color: rgb(27, 36, 47);
 }
 
 .card-group {
@@ -76,7 +78,7 @@ footer.bg-dark {
 }
 
 .card {
-	border: none !important;
+	border: none;
 }
 
 .main-body {
@@ -123,8 +125,8 @@ footer.bg-dark {
 
 .skill-list-item .progress {
 	width: 75%;
-	height: 28px !important;
-	border-radius: 0 !important;
+	height: 28px;
+	border-radius: 0;
 	font-size: 11pt;
 }
 
@@ -137,8 +139,8 @@ footer.bg-dark {
 }
 
 .btn-primary {
-	background-color: #04C2C9 !important;
-	border-color: #04C2C9 !important;
+	background-color: #04C2C9;
+	border-color: #04C2C9;
 }
 
 
