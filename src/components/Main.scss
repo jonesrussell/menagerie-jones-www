@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto');
 
 body {
 	font-family: 'Raleway', sans-serif !important;
+    padding-top: 53px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 53px;
+  }
 }
 
 main h1 {
@@ -45,6 +51,20 @@ hr {
     height: 3px !important;
     width: 70px;
 	margin-bottom: 40px !important;
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
 }
 
 footer.bg-dark {
