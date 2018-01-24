@@ -139,61 +139,6 @@ footer.bg-dark {
 	border-color: #04C2C9 !important;
 }
 
-/* Contact form */
-.contact-form-container {
-	background-color: #252934;
-	padding: 20px 0 100px 0;
-}
-
-.contact-form {
-	color: #04C2C9 !important;
-	width: 30%;
-	margin: 40px auto;
-	text-align: center;
-}
-
-.contact-form-sent {
-	background-color: #E31B6D;
-	color: #FFF;
-	padding: 10px 5px;
-}
-
-
-.contact-form input,
-.contact-form textarea {
-	background-color: #1E242C;
-	border-radius: 0;
-	border: 1px solid #1E242C;
-}
-
-.contact-form h1 {
-	color: #FFF;
-	text-transform: uppercase;
-}
-
-.contact-form hr {
-	background-color: #FFF;
-}
-
-.contact-form p {
-	color: #04C2C9 !important;
-	font-size: 12pt !important;
-	font-weight: 600;
-	margin: 40px 0;
-}
-
-.contact-form label {
-	display: none;
-}
-
-.contact-form textarea {
-	height: 100px;
-}
-
-.contact-form a.btn {
-	color: #FFF !important;
-	float: right;
-}
 
 /* Global forms */
 .is-valid {
