@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import './Contact.scss'
 
 class Contact extends Component {
 	constructor(props) {
@@ -75,6 +74,7 @@ class Contact extends Component {
 	}
 
 	render() {
+		import('./Contact.scss');
 		let name = this.state.name;
 		let email = this.state.email;
 		let message = this.state.message;

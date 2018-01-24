@@ -1,0 +1,20 @@
+/* Menu.scss */
+@import './variables.scss';
+
+nav.navbar {
+	background-color: $gray-dark !important;
+	height: 50px;
+	border-bottom: 3px solid $blue;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.navbar ul.ml-auto {
+	margin-left: 0 !important;
+}
+
+.navbar-brand, 
+.navbar-dark .navbar-nav .nav-link {
+	color: $white;
+	font-size: 12pt;
+}
