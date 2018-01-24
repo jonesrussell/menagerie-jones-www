@@ -1,6 +1,6 @@
+/* Main.scss */
+@import './variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto');
-
-$default-font: 'Raleway', sans-serif;
 
 body {
 	font-family: $default-font; 
@@ -13,18 +13,18 @@ body {
   }
 }
 
-main h1 {
-    font-weight: bold;
+h1 {
+    font-weight: $font-weight-h1;
     line-height: 46px;
-    font-size: 46px;
+    font-size: $font-size-h1;
     margin: 0 0 43px 0;
 	text-transform: uppercase;
-	color: #444649;
+	color: $gray;
 }
 
 h2 {
-    font-weight: normal;
-    font-size: 21px;
+    font-weight: $font-weight-h2;
+    font-size: $font-size-h2;
     line-height: 23px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -32,12 +32,12 @@ h2 {
 }
 
 h4 {
-	font-weight: bold;
-	color: #616161;
+	font-weight: $font-weight-h4;
+	color: $gray-light;
 }
 
 p {
-	color: #616161;
+	color: $gray-light;
     font-size: 12pt;
     line-height: 23px;
     margin: 0 0 23px 0;
@@ -49,7 +49,7 @@ main {
 }
 
 hr {
-	background-color: #444649;
+	background-color: $gray;
     height: 3px;
     width: 70px;
 	margin-bottom: 40px;
@@ -69,10 +69,6 @@ hr {
   margin-bottom: 30px;
 }
 
-footer.bg-dark {
-	background-color: rgb(27, 36, 47);
-}
-
 .card-group {
 	margin: 40px 0;
 }
@@ -86,7 +82,7 @@ footer.bg-dark {
 }
 
 .fa {
-	color: #04C2C9;
+	color: $blue;
 }
 
 .portrait-col {
@@ -94,7 +90,7 @@ footer.bg-dark {
 }
 
 .portrait {
-	border: 2px solid rgb(27, 36, 47); 
+	border: 2px solid $gray-dark; 
 	width: 250px;
 	height: 250px;
 	overflow: hidden;
@@ -110,14 +106,14 @@ footer.bg-dark {
 
 .skill-list-item {
 	display: flex;
-	background-color: #EEEEEE;
+	background-color: $gray-light;
 	margin-bottom: 10px;
 }
 
 .skill-list-item div.skill {
 	width: 25%;
-	background-color: #04C2C9;
-	color: #FFF;
+	background-color: $blue;
+	color: $white;
 	font-weight: bold;
 	padding-top: 4px;
 	font-size: 11pt;
@@ -131,7 +127,7 @@ footer.bg-dark {
 }
 
 .skill-list-item .progress-bar {
-	background-color: #00A1A7;
+	background-color: $blue-dark;
 }
 
 .skill-list-container {
@@ -139,8 +135,8 @@ footer.bg-dark {
 }
 
 .btn-primary {
-	background-color: #04C2C9;
-	border-color: #04C2C9;
+	background-color: $blue;
+	border-color: $blue;
 }
 
 

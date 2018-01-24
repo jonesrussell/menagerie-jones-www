@@ -1,4 +1,6 @@
 /* Home.scss */
+@import './variables.scss';
+
 body {
 	padding-top: 0;
 }
@@ -19,7 +21,7 @@ body {
 	align-items: center; /*centers items on the cross-axis (y by default)*/
 }
 
-h1, h2 { color: white; }
+h1, h2 { color: $white; }
 
 h1 {
 	font-size: 32pt;
@@ -36,20 +38,20 @@ p {
 }
 
 strong {
-	color: #E31B6D;
+	color: $pink-dark;
 }
 
 .btn-outline-secondary {
-	font-family: 'Roboto', sans-serif;
-	color: white;
-	border-color: white;
+	font-family: $accent-font; 
+	color: $white;
+	border-color: $white;
 	border-width: 2px;
 }
 
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus {
-	background-color: #04C2C9;
-	border-color: #04C2C9;
+	background-color: $blue;
+	border-color: $blue;
 }
 
 .portrait {

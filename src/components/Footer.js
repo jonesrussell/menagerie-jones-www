@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const Footer = () => (
-    <footer className="py-5 bg-dark">
-      <div className="container">
-        <p className="m-0 text-center text-white">&dagger; {new Date().getFullYear()}</p>
-      </div>
-    </footer>
-)
+class Footer extends Component {
+	render() {
+		import('./Footer.scss');
+
+		return (
+			<footer className="py-5">
+			  <div className="container">
+				<p className="m-0 text-center text-white">&dagger; {new Date().getFullYear()}</p>
+			  </div>
+			</footer>
+		)
+	}
+}
 
 export default Footer 

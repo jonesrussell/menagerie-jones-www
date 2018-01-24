@@ -1,8 +1,10 @@
 /* Menu.scss */
+@import './variables.scss';
+
 nav.navbar {
-	background-color: rgb(27, 36, 47);
+	background-color: $gray-dark !important;
 	height: 50px;
-	border-bottom: 3px solid #04C2C9;
+	border-bottom: 3px solid $blue;
 	text-transform: uppercase;
 	font-weight: 300;
 }
@@ -13,7 +15,6 @@ nav.navbar {
 
 .navbar-brand, 
 .navbar-dark .navbar-nav .nav-link {
-	color: #FFFFFF;
+	color: $white;
 	font-size: 12pt;
 }
-

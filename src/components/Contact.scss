@@ -1,20 +1,22 @@
 /* Contact.scss */
+@import './variables.scss';
+
 .contact-form-container {
 	background-color: #252934;
 	padding: 20px 0 100px 0;
 }
 
 .contact-form {
-	color: #04C2C9;
+	color: $blue;
 	width: 30%;
 	margin: 40px auto;
 	text-align: center;
 
 	input,
 	textarea {
-		background-color: #1E242C;
+		background-color: $gray-darker;
 		border-radius: 0;
-		border: 1px solid #1E242C;
+		border: 1px solid $gray-darker;
 	}
 
 	h1 {
@@ -23,11 +25,11 @@
 	}
 
 	hr {
-		background-color: #FFF;
+		background-color: $white;
 	}
 
 	p {
-		color: #04C2C9;
+		color: $blue;
 		font-size: 12pt;
 		font-weight: 600;
 		margin: 40px 0;
@@ -42,13 +44,13 @@
 	}
 
 	a.btn {
-		color: #FFF;
+		color: $white;
 		float: right;
 	}
 
 	.contact-form-sent {
-		background-color: #E31B6D;
-		color: #FFF;
+		background-color: $pink-dark;
+		color: $white;
 		padding: 10px 5px;
 	}
 }
