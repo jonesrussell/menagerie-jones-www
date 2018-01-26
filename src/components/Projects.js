@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
-import $ from 'jquery'
+import React, { Component } from 'react';
+import { Badge } from 'reactstrap';
+import $ from 'jquery';
+import './Projects.scss';
 
 class Projects extends Component {
 	constructor() {
@@ -36,9 +38,7 @@ class Projects extends Component {
 			})
 				.then(data => {
 					_this.setState({ data: data });
-					console.log(_this.state.data);
 					_this.state.data.map(function(bar) {
-						console.log(bar);
 						return bar;
 					});
 			});
@@ -56,15 +56,20 @@ class Projects extends Component {
 
 				{
 					this.state.data.map(function(project) {
+						let badge = '';
+						console.log(project);
+						if (project.field_proof_of_concept[0].value) badge = <Badge>Proof of concept</Badge>;
+						let body = <div dangerouslySetInnerHTML={{__html: project.body[0].value}} />;
+
 						return (
 							<div className="row" key={project.nid[0].value}>
 								<div className="col-md-7" style={{ overflow: 'hidden' }}>
 									<img src={project.field_image[0].url} alt={project.field_image[0].alt}/>
 								</div>
 								<div className="col-md-5">
-									<h3>{project.title[0].value}</h3>
-									<p>{$(project.body[0].value).html()}</p>
-									<button className="btn btn-primary">Details</button>
+									<h3>{project.title[0].value} {badge}</h3>
+									<div>{body}</div>
+									<button className="btn btn-primary">Learn more</button>
 								</div>
 							</div>
 						)

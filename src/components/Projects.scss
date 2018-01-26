@@ -1,0 +1,18 @@
+/* Projects.scss */
+@import './variables.scss';
+
+#page-projects .row {
+	text-align: left;
+	
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.badge-secondary {
+	background-color: $pink-dark;
+	font-size: 0.4em;
+	position: relative;
+	top: -10px;
+}
