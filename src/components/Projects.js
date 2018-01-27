@@ -16,7 +16,7 @@ class Projects extends Component {
 	componentDidMount() {
 		let _this = this;
 
-		fetch('https://techjones-backend.herokuapp.com/node/3?_format=json')
+		fetch('http://live-menagerie-jones.pantheonsite.io/node/3?_format=json')
 			.then(results => {
 				return results.json();
 			})
@@ -32,7 +32,7 @@ class Projects extends Component {
 			});
 
 
-		fetch('http://menagerie-jones.com/projects?_format=json')
+		fetch('http://live-menagerie-jones.pantheonsite.io/projects?_format=json')
 			.then(results => {
 				return results.json();
 			})
