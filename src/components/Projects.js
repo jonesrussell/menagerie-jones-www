@@ -2,21 +2,27 @@ import React, { Component } from 'react';
 import { Badge } from 'reactstrap';
 import $ from 'jquery';
 import './Projects.scss';
+import Lightbox from "react-image-lightbox";
 
 class Projects extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
+
 		this.state = {
 			title: '',
 			body: '',
-			data: []
+			data: [],
+			isOpen: false,
+			images: []
 		};
 	};
 
 	componentDidMount() {
 		let _this = this;
 
-		fetch('http://live-menagerie-jones.pantheonsite.io/node/3?_format=json')
+		//let host = 'http://live-menagerie-jones.pantheonsite.io';
+		let host = 'http://menagerie-jones.com';
+		fetch(host + '/node/3?_format=json')
 			.then(results => {
 				return results.json();
 			})
@@ -32,7 +38,7 @@ class Projects extends Component {
 			});
 
 
-		fetch('http://live-menagerie-jones.pantheonsite.io/projects?_format=json')
+		fetch(host + '/projects?_format=json')
 			.then(results => {
 				return results.json();
 			})
@@ -45,6 +51,10 @@ class Projects extends Component {
 	}
 
 	render() {
+		let _this = this;
+		let isOpen = this.state.isOpen;
+		let images = [];
+
 		return (
 			<div id="page-projects">
 				<h1>{this.state.title}</h1>
@@ -55,16 +65,22 @@ class Projects extends Component {
 				</div>
 
 				{
-					this.state.data.map(function(project) {
-						let badge = '';
-						console.log(project);
-						if (project.field_proof_of_concept[0].value) badge = <Badge>Proof of concept</Badge>;
+					this.state.data.map(function(project)
+					{
+						let badge = (project.field_proof_of_concept[0].value) ? <Badge>Proof of concept</Badge> : '';
 						let body = <div dangerouslySetInnerHTML={{__html: project.body[0].value}} />;
+						images.push(project.field_image[0].url);
+//						console.log(project.field_image[0].url);
+//						console.log('i-1: ', i-1);
+						let imagesLength = images.length;
 
 						return (
 							<div className="row" key={project.nid[0].value}>
 								<div className="col-md-7" style={{ overflow: 'hidden' }}>
-									<img src={project.field_image[0].url} alt={project.field_image[0].alt}/>
+									<img src={project.field_image[0].url} alt={project.field_image[0].alt} onClick={ function() {
+										console.log('imagesLength: ', imagesLength);
+										_this.setState({ photoIndex: imagesLength - 1, isOpen: true })
+									}}/>
 								</div>
 								<div className="col-md-5">
 									<h3>{project.title[0].value} {badge}</h3>
@@ -73,8 +89,18 @@ class Projects extends Component {
 								</div>
 							</div>
 						)
+
 					})
 				}
+
+			{console.log('this.state.photoIndex', this.state.photoIndex)}
+				{isOpen && (
+				  <Lightbox
+					mainSrc={images[this.state.photoIndex]}
+					onCloseRequest={() => _this.setState({ isOpen: false })}
+				  />
+				)}
+
 			</div>
 		)
 	}
