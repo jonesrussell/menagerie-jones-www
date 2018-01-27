@@ -13,7 +13,7 @@ class About extends Component {
 	};
 
 	componentDidMount() {
-		fetch('http://http://dev-menagerie-jones.pantheonsite.io/node/1?_format=json')
+		fetch('https://techjones-backend.herokuapp.com/node/1?_format=json')
 			.then(results => {
 				return results.json();
 			})

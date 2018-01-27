@@ -16,7 +16,7 @@ class Projects extends Component {
 	componentDidMount() {
 		let _this = this;
 
-		fetch('http://http://dev-menagerie-jones.pantheonsite.io/node/3?_format=json')
+		fetch('https://techjones-backend.herokuapp.com/node/3?_format=json')
 			.then(results => {
 				return results.json();
 			})
