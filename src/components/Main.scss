@@ -148,3 +148,8 @@ hr {
 .row {
 	margin-bottom: 40px;
 }
+
+/* Lightbox */
+.ReactModal__Overlay--after-open {
+	z-index: 1100 !important;
+}
