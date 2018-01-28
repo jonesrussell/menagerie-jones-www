@@ -11,7 +11,7 @@ class Projects extends Component {
 		this.state = {
 			title: '',
 			body: '',
-			data: [],
+			projects: [],
 			isOpen: false,
 			images: []
 		};
@@ -43,8 +43,8 @@ class Projects extends Component {
 				return results.json();
 			})
 				.then(data => {
-					_this.setState({ data: data });
-					_this.state.data.map(function(bar) {
+					_this.setState({ projects: data });
+					_this.state.projects.map(function(bar) {
 						return bar;
 					});
 			});
@@ -74,7 +74,6 @@ class Projects extends Component {
 
 	render() {
 		let _this = this;
-		let isOpen = this.state.isOpen;
 		let images = [];
 
 		return (
@@ -84,8 +83,8 @@ class Projects extends Component {
 				<div id="projects-page-body">
 					{this.state.body}
 				</div>
-				{ this.state.data.map(function(project) { return ( _this.showProject(project, images, _this) ) }) } 
-				{isOpen && (
+				{ this.state.projects.map(function(project) { return ( _this.showProject(project, images, _this) ) }) } 
+				{this.state.isOpen && (
 				  <Lightbox
 					mainSrc={images[this.state.photoIndex]}
 					onCloseRequest={() => _this.setState({ isOpen: false })}
