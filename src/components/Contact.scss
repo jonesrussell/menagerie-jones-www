@@ -1,5 +1,5 @@
 /* Contact.scss */
-@import './variables.scss';
+@import './_variables.scss';
 
 .contact-form-container {
 	background-color: #252934;
@@ -8,7 +8,7 @@
 
 .contact-form {
 	color: $blue;
-	width: 30%;
+	width: 80%;
 	margin: 40px auto;
 	text-align: center;
 
@@ -55,5 +55,14 @@
 	}
 }
 
+@media only screen and (min-width: map-get($grid-breakpoints, sm)) {
+	.contact-form {
+		width: 40%;
+	}
+}
 
-
+@media only screen and (min-width: map-get($grid-breakpoints, lg)) {
+	.contact-form {
+		width: 30%;
+	}
+}

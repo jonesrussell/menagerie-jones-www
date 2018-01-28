@@ -33,36 +33,6 @@ class About extends Component {
 				<div className="main-body">
 					{this.state.body}
 				</div>
-				<CardDeck>
-				  <Card>
-					<i className="fa fa-thumbs-up fa-5x" aria-hidden="true"></i>
-					<CardBody>
-					  <CardTitle>Positive thinking</CardTitle>
-					  <CardText><q>Perpetual optimism is a force multiplier.</q> -Colin Powell</CardText>
-					</CardBody>
-				  </Card>
-				  <Card>
-					<i className="fa fa-commenting fa-5x" aria-hidden="true"></i>
-					<CardBody>
-					  <CardTitle>Effective communicator</CardTitle>
-					  <CardText><q>The single biggest problem in communication is the illusion that it has taken place.</q> -George Bernard Shaw</CardText>
-					</CardBody>
-				  </Card>
-				  <Card>
-					<i className="fa fa-hourglass fa-5x" aria-hidden="true"></i>
-					<CardBody>
-					  <CardTitle>Resource management</CardTitle>
-					  <CardText><q>Time management is really key for me.</q> -Marc Guggenheim</CardText>
-					</CardBody>
-				  </Card>
-				  <Card>
-					<i className="fa fa-graduation-cap fa-5x" aria-hidden="true"></i>
-					<CardBody>
-					  <CardTitle>Quick learner</CardTitle>
-					  <CardText><q>I'm pretty instinctive. I'm a quick learner.</q> -Shannon Elizabeth</CardText>
-					</CardBody>
-				  </Card>
-    			</CardDeck>
 				<div className="row">
 					<div className="col col-md-5 portrait-col">
 						<div className="portrait">
@@ -116,6 +86,37 @@ class About extends Component {
 						</div>
 					</div>
 				</div>
+				<CardDeck>
+				  <Card>
+					<i className="fa fa-thumbs-up fa-5x" aria-hidden="true"></i>
+					<CardBody>
+					  <CardTitle>Positive thinking</CardTitle>
+					  <CardText><q>Perpetual optimism is a force multiplier.</q> -Colin Powell</CardText>
+					</CardBody>
+				  </Card>
+				  <Card>
+					<i className="fa fa-commenting fa-5x" aria-hidden="true"></i>
+					<CardBody>
+					  <CardTitle>Effective communicator</CardTitle>
+					  <CardText><q>The single biggest problem in communication is the illusion that it has taken place.</q> -George Bernard Shaw</CardText>
+					</CardBody>
+				  </Card>
+				  <Card>
+					<i className="fa fa-hourglass fa-5x" aria-hidden="true"></i>
+					<CardBody>
+					  <CardTitle>Resource management</CardTitle>
+					  <CardText><q>Time management is really key for me.</q> -Marc Guggenheim</CardText>
+					</CardBody>
+				  </Card>
+				  <Card>
+					<i className="fa fa-graduation-cap fa-5x" aria-hidden="true"></i>
+					<CardBody>
+					  <CardTitle>Quick learner</CardTitle>
+					  <CardText><q>I'm pretty instinctive. I'm a quick learner.</q> -Shannon Elizabeth</CardText>
+					</CardBody>
+				  </Card>
+    			</CardDeck>
+
 				<div className="projects-button">
 					<Button color="primary" tag="a" href="/projects">Check out my projects</Button>
 				</div>
