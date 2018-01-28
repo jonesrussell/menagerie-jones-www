@@ -20,8 +20,8 @@ class Projects extends Component {
 	componentDidMount() {
 		let _this = this;
 
-		//let host = 'http://live-menagerie-jones.pantheonsite.io';
-		let host = 'http://menagerie-jones.com';
+		let host = 'http://live-menagerie-jones.pantheonsite.io';
+		//let host = 'http://menagerie-jones.com';
 		fetch(host + '/node/3?_format=json')
 			.then(results => {
 				return results.json();
