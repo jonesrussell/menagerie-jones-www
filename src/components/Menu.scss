@@ -1,19 +1,21 @@
 /* Menu.scss */
 @import './_variables.scss';
 
-nav.navbar {
+.navbar {
 	background-color: $gray-dark !important;
-	//height: 50px;
 	border-bottom: 3px solid $blue;
 	text-transform: uppercase;
 	font-weight: 300;
+
+	ul.ml-auto {
+		margin-left: 0 !important;
+	}
+
+	a.active {
+		color: $pink-dark !important;
+	}
 }
 
-.navbar ul.ml-auto {
-	margin-left: 0 !important;
-}
-
-.navbar-brand, 
 .navbar-dark .navbar-nav .nav-link {
 	color: $white;
 	font-size: 12pt;

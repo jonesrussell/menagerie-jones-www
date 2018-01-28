@@ -12,10 +12,18 @@ class Menu extends Component {
 	constructor(props) {
 		super(props);
 
+		let path = props.location.pathname;
 		this.toggle = this.toggle.bind(this);
 		this.state = {
-			isOpen: false
+			isOpen: false,
+			active: {
+				about: path.includes('about'),
+				projects: path.includes('projects'),
+				contact: false
+			}
 		};
+
+		console.log(this);
   	}
 
 	toggle() {
@@ -38,13 +46,13 @@ class Menu extends Component {
 							<NavLink href="/">Home</NavLink>
 						  </NavItem>
 						  <NavItem>
-							<NavLink href="/about">About</NavLink>
+							<NavLink active={this.state.active.about} href="/about">About</NavLink>
 						  </NavItem>
 						  <NavItem>
-							<NavLink href="/projects">Projects</NavLink>
+							<NavLink active={this.state.active.projects} href="/projects">Projects</NavLink>
 						  </NavItem>
 						  <NavItem>
-							<NavLink href="#contact-form">Contact</NavLink>
+							<NavLink active={this.state.active.contact} href="#contact-form"><i className="fa fa-address-card-o" aria-hidden="true"></i></NavLink>
 						  </NavItem>
 						</Nav>
 					  </Collapse>
