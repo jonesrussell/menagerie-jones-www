@@ -63,15 +63,15 @@ class About extends Component {
 					</CardBody>
 				  </Card>
     			</CardDeck>
-				<div className="row skill-list-container">
-					<div className="col portrait-col">
+				<div className="row">
+					<div className="col col-md-5 portrait-col">
 						<div className="portrait">
 							<img src="images/russell-jones.png" alt="Russell Jones" />
 						</div>
 						<h4>Russell</h4>
 						<p>Over 18 years of Experience in IT Management and Web Development.</p>
 					</div>
-					<div className="col">
+					<div className="col col-md-7">
 						<div className="skill-list">
 							<div className="skill-list-item">
 								<div className="skill">CSS</div>
