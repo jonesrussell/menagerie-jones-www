@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
-import { Card, Button, CardTitle, CardText, CardGroup, CardBody, Progress } from 'reactstrap';
+import { Card, Button, CardTitle, CardText, CardDeck, CardBody, Progress } from 'reactstrap';
 import 'font-awesome/css/font-awesome.min.css';
 
 class About extends Component {
@@ -13,7 +13,8 @@ class About extends Component {
 	};
 
 	componentDidMount() {
-		fetch('http://live-menagerie-jones.pantheonsite.io/node/1?_format=json')
+		//fetch('http://live-menagerie-jones.pantheonsite.io/node/1?_format=json')
+		fetch('http://192.168.0.116/node/1?_format=json')
 			.then(results => {
 				return results.json();
 			})
@@ -32,7 +33,7 @@ class About extends Component {
 				<div className="main-body">
 					{this.state.body}
 				</div>
-				<CardGroup>
+				<CardDeck>
 				  <Card>
 					<i className="fa fa-thumbs-up fa-5x" aria-hidden="true"></i>
 					<CardBody>
@@ -61,7 +62,7 @@ class About extends Component {
 					  <CardText><q>I'm pretty instinctive. I'm a quick learner.</q> -Shannon Elizabeth</CardText>
 					</CardBody>
 				  </Card>
-    			</CardGroup>
+    			</CardDeck>
 				<div className="row skill-list-container">
 					<div className="col portrait-col">
 						<div className="portrait">

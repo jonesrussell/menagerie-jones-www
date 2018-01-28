@@ -2,6 +2,7 @@
 @import './variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto');
 
+/* Global */
 body {
 	font-family: $default-font; 
     padding-top: 53px;
@@ -48,6 +49,11 @@ main {
 	padding: 40px 0;
 }
 
+.main-body {
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+
 hr {
 	background-color: $gray;
     height: 3px;
@@ -55,36 +61,31 @@ hr {
 	margin-bottom: 40px;
 }
 
-.carousel-item {
-  height: 65vh;
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.btn-primary {
+	background-color: $blue;
+	border-color: $blue;
 }
 
+/* Portfolio */
 .portfolio-item {
   margin-bottom: 30px;
 }
 
-.card-group {
-	margin: 40px 0;
+/* Cards */
+.card-deck {
+	margin-bottom: 40px;
 }
 
 .card {
 	border: none;
 }
 
-.main-body {
-	margin-top: 25px;
-}
-
+/* Icons */
 .fa {
 	color: $blue;
 }
 
+/* Portraits */
 .portrait-col {
 	text-align: center;
 }
@@ -104,6 +105,7 @@ hr {
 	margin-left: -30px;
 }
 
+/* Skill list */
 .skill-list-item {
 	display: flex;
 	background-color: $gray-light;
@@ -133,12 +135,6 @@ hr {
 .skill-list-container {
 	margin-bottom: 40px;
 }
-
-.btn-primary {
-	background-color: $blue;
-	border-color: $blue;
-}
-
 
 /* Global forms */
 .is-valid {
