@@ -25,3 +25,12 @@ $gray-dark: #1B242F;
 $gray-darker: #1E242C;
 
 $pink-dark: #E31B6D;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+

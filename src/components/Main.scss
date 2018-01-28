@@ -78,6 +78,13 @@ hr {
 
 .card {
 	border: none;
+	flex-basis: 45% !important;
+}
+
+@media only screen and (min-width: map-get($grid-breakpoints, lg)) {
+	.card {
+		flex-basis: 0% !important;
+	}
 }
 
 /* Icons */
