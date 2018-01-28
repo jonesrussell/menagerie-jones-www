@@ -17,7 +17,7 @@ h1 {
     font-weight: $font-weight-h1;
     line-height: 46px;
     font-size: $font-size-h1;
-    margin: 0 0 43px 0;
+    margin: 0 0 20px 0;
 	text-transform: uppercase;
 	color: $gray;
 }
@@ -45,7 +45,7 @@ p {
 
 main {
 	text-align: center;
-	padding: 50px 0;
+	padding: 40px 0;
 }
 
 hr {
@@ -152,4 +152,10 @@ hr {
 /* Lightbox */
 .ReactModal__Overlay--after-open {
 	z-index: 1100 !important;
+}
+
+/* Rows & Columns */
+.col {
+	margin-bottom: 15px;
+	flex-basis: auto;
 }
