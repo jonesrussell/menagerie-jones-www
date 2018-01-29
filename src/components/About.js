@@ -11,8 +11,9 @@ class About extends Component {
 	};
 
 	componentDidMount() {
-		//fetch('http://live-menagerie-jones.pantheonsite.io/node/1?_format=json')
-		fetch('http://192.168.0.116/node/1?_format=json')
+		let host = 'http://live-menagerie-jones.pantheonsite.io';
+		//let host = 'http://192.168.0.116/node';
+		fetch(host + '/node/1?_format=json')
 			.then(results => {
 				return results.json();
 			})
