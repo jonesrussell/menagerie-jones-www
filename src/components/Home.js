@@ -29,11 +29,10 @@ class Home extends Component {
 
 	render() { 
 		import('./Home.scss');
-		let body = <div dangerouslySetInnerHTML={{__html: this.state.body}} />;
 
 		return (
 			<div id="page-home" style={{ textAlign: 'center' }}>
-				{body}
+				<div dangerouslySetInnerHTML={{__html: this.state.body}} />
 			</div>
 		)
 	}	

@@ -52,7 +52,9 @@ class Contact extends Component {
 		let data = JSON.stringify(payload);
 		let _this = this;
 
-		fetch('http://menagerie-jones.com/entity/contact_message?_format=json',
+//		let host = 'http://192.168.0.116';
+		let host = 'http://live-menagerie-jones.pantheonsite.io';
+		fetch(host + '/entity/contact_message?_format=json',
 			{
 				method: "POST",
 				headers: {
