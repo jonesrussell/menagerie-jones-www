@@ -93,15 +93,15 @@ class Contact extends Component {
 					<Form>
 						<FormGroup tag="fieldset">
 							<FormGroup>
-								<Label for="contact-name">Name</Label>
+								<Label for="contact-name" hidden>Name</Label>
 								<Input type="text" name="name" id="contact-name" placeholder="Name" value={name} onChange={this.handleChange} disabled={disableInput} />
 							</FormGroup>
 							<FormGroup>
-								<Label for="contact-email">Email</Label>
+								<Label for="contact-email" hidden>Email</Label>
 								<Input type="email" name="email" id="contact-email" placeholder="Email" value={email} onChange={this.handleChange} disabled={disableInput} />
 							</FormGroup>
 							<FormGroup>
-								<Label for="contact-message">Your message</Label>
+								<Label for="contact-message" hidden>Your message</Label>
 								<Input type="textarea" name="message" id="contact-message" placeholder="Your message..." value={message} onChange={this.handleChange} disabled={disableInput} />
 							</FormGroup>
 						</FormGroup>
