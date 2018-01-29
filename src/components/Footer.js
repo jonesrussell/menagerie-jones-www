@@ -7,7 +7,22 @@ class Footer extends Component {
 		return (
 			<footer className="py-5">
 			  <div className="container">
-				<p className="m-0 text-center text-white">&dagger; {new Date().getFullYear()}</p>
+				<div>
+					<p>
+						<a href="https://github.com/jonesrussell" target="_blank"><i className="fa fa-github fa-3x" aria-hidden="true"></i></a>
+						&nbsp;
+						&nbsp;
+						<a href="https://www.linkedin.com/in/jonesrussell42" target="_blank"><i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+						&nbsp;
+						&nbsp;
+						<a href="https://twitter.com/jonesrussell42" target="_blank"><i className="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+					</p>
+					<p className="m-0 year">
+						<i className="fa fa-barcode" aria-hidden="true"></i>
+						&nbsp;
+						{new Date().getFullYear()}
+					</p>
+				</div>
 			  </div>
 			</footer>
 		)
