@@ -22,8 +22,6 @@ class Menu extends Component {
 				contact: false
 			}
 		};
-
-		console.log(this);
   	}
 
 	toggle() {

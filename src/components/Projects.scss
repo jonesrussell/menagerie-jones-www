@@ -1,12 +1,36 @@
 /* Projects.scss */
 @import './_variables.scss';
 
-#page-projects .row {
-	text-align: left;
+#page-projects {
+	div:last-child hr {
+		display: none;
+	}
+
+	.row {
+		text-align: left;
+	}
 	
 	img {
 		width: 100%;
 		height: auto;
+	}
+
+	img:hover {
+		cursor: zoom-in;
+	}
+}
+
+@media only screen and (min-width: map-get($grid-breakpoints, md)) {
+	#page-projects {
+
+		.row {
+			margin-bottom: 40px;
+		}
+
+		#projects hr {
+			display: none;
+		}
+
 	}
 }
 
