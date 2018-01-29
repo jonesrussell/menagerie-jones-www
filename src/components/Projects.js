@@ -67,7 +67,9 @@ class Projects extends Component {
 					<div className="col col-md-5">
 						<h3>{project.title[0].value} {badge}</h3>
 						<div>{body}</div>
-						<strong className="source">Source: </strong> <a href={project.field_github[0].uri} target="_blank"><i className="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+						<strong className="source">Source:</strong>{
+							// eslint-disable-next-line
+						 } <a href={project.field_github[0].uri} target="_blank"><i className="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
 					</div>
 				</div>
 				<hr/>
