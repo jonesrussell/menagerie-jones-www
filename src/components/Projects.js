@@ -20,8 +20,8 @@ class Projects extends Component {
 	componentDidMount() {
 		let _this = this;
 
-//		let host = 'http://live-menagerie-jones.pantheonsite.io';
-		let host = 'http://192.168.0.116';
+		let host = 'http://live-menagerie-jones.pantheonsite.io';
+//		let host = 'http://192.168.0.116';
 		fetch(host + '/node/3?_format=json')
 			.then(results => {
 				return results.json();
@@ -67,7 +67,7 @@ class Projects extends Component {
 					<div className="col col-md-5">
 						<h3>{project.title[0].value} {badge}</h3>
 						<div>{body}</div>
-						<strong className="source">Source: </strong> <i className="fa fa-github-square fa-3x" aria-hidden="true"></i>
+						<strong className="source">Source: </strong> <a href={project.field_github[0].uri} target="_blank"><i className="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
 					</div>
 				</div>
 				<hr/>
