@@ -18,6 +18,13 @@
 	img:hover {
 		cursor: zoom-in;
 	}
+
+	.demo {
+		margin-bottom: 5px;
+		strong {
+			padding-right: 11px;
+		}
+	}
 }
 
 @media only screen and (min-width: map-get($grid-breakpoints, md)) {
