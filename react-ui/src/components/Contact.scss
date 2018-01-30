@@ -1,0 +1,64 @@
+/* Contact.scss */
+@import './_variables.scss';
+
+.contact-form-container {
+	background-color: #252934;
+	padding: 20px 0 100px 0;
+}
+
+.contact-form {
+	color: $blue;
+	width: 80%;
+	margin: 40px auto;
+	text-align: center;
+
+	input,
+	textarea {
+		background-color: $gray-darker;
+		border-radius: 0;
+		border: 1px solid $gray-darker;
+	}
+
+	h1 {
+		color: #FFF;
+		text-transform: uppercase;
+	}
+
+	hr {
+		background-color: $white;
+	}
+
+	p {
+		color: $blue;
+		font-size: 12pt;
+		font-weight: 600;
+		margin: 40px 0;
+	}
+
+	textarea {
+		height: 100px;
+	}
+
+	a.btn {
+		color: $white;
+		float: right;
+	}
+
+	.contact-form-sent {
+		background-color: $pink-dark;
+		color: $white;
+		padding: 10px 5px;
+	}
+}
+
+@media only screen and (min-width: map-get($grid-breakpoints, sm)) {
+	.contact-form {
+		width: 40%;
+	}
+}
+
+@media only screen and (min-width: map-get($grid-breakpoints, lg)) {
+	.contact-form {
+		width: 30%;
+	}
+}

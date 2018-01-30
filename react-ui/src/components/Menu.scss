@@ -1,0 +1,22 @@
+/* Menu.scss */
+@import './_variables.scss';
+
+.navbar {
+	background-color: $gray-dark !important;
+	border-bottom: 3px solid $blue;
+	text-transform: uppercase;
+	font-weight: 300;
+
+	ul.ml-auto {
+		margin-left: 0 !important;
+	}
+
+	a.active {
+		color: $pink-dark !important;
+	}
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: $white;
+	font-size: 12pt;
+}

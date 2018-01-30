@@ -1,3 +1,6 @@
+/* Home.scss */
+@import './_variables.scss';
+
 body {
 	padding-top: 0;
 }
@@ -5,12 +8,12 @@ body {
 #body-container {
 	width: 100%;
 	height: 100%;
-	background-image: url(../images/home-background.jpg);
+	position: absolute;
+	background-image: url('./images/home-background.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: hidden;
-	position: absolute;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -18,40 +21,45 @@ body {
 	align-items: center; /*centers items on the cross-axis (y by default)*/
 }
 
-h1, h2 { color: white !important; }
+#page-home {
+	padding-top: 70px;
+}
+
+h1, h2 { color: $white; }
 
 h1 {
-	font-size: 32pt;
+	font-size: 27pt;
 	line-height: 36pt;
 }
 
 h2 {
-	font-size: 17pt;
-	line-height: 32pt;
+	font-size: 15pt;
+	line-height: 28pt;
 }
 
 p {
-	margin-top: 15px !important;
+	margin-top: 15px;
 }
 
 strong {
-	color: #E31B6D;
+	color: $pink-dark;
 }
 
 .btn-outline-secondary {
-	font-family: 'Roboto', sans-serif !important;
-	color: white !important;
-	border-color: white !important;
-	border-width: 2px !important;
+	font-family: $accent-font; 
+	color: $white;
+	border-color: $white;
+	border-width: 2px;
 }
 
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus {
-	background-color: #04C2C9;
-	border-color: #04C2C9 !important;
+	background-color: $blue;
+	border-color: $blue;
 }
 
 .portrait {
+	margin-top: 25px;
 	border: 2px solid #FFFFFF;
 	margin-left: auto;
 	margin-right: auto;

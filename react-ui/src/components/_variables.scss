@@ -1,0 +1,36 @@
+/* _variables.scss */
+$default-font: 'Raleway', sans-serif;
+
+$accent-font: 'Roboto', sans-serif;
+
+$font-size-h1: 46px;
+$font-size-h2: 21px;
+$font-size-h3: inherit;
+$font-size-h4: inherit;
+
+$font-weight-h1: bold;
+$font-weight-h2: normal;
+$font-weight-h3: inherit;
+$font-weight-h4: bold;
+
+$white: #FFF;
+$black: #000;
+
+$blue: #04C2C9; 
+$blue-dark: #00A1A7;
+
+$gray: #444649;
+$gray-light: #616161;
+$gray-dark: #1B242F;
+$gray-darker: #1E242C;
+
+$pink-dark: #E31B6D;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+

@@ -1,0 +1,18 @@
+/* Footer.scss */
+@import './_variables.scss';
+
+footer {
+	background-color: $gray-dark;
+	text-align: center;
+
+	.fa {
+		color: $pink-dark;
+	}
+
+	.year,
+    .year .fa {
+		color: $white;
+		font-size: 11pt;
+	}
+
+}

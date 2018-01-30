@@ -1,0 +1,183 @@
+/* Main.scss */
+@import './_variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto');
+
+/* Global */
+body {
+	font-family: $default-font; 
+    padding-top: 53px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 53px;
+  }
+}
+
+h1 {
+    font-weight: $font-weight-h1;
+    line-height: 46px;
+    font-size: $font-size-h1;
+    margin: 0 0 20px 0;
+	text-transform: uppercase;
+	color: $gray;
+}
+
+h2 {
+    font-weight: $font-weight-h2;
+    font-size: $font-size-h2;
+    line-height: 23px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 23px 0;
+}
+
+h3 {
+	margin-bottom: 20px;
+}
+
+@media only screen and (min-width: map-get($grid-breakpoints, lg)) {
+	h3 {
+		margin-bottom: 10px;
+	}
+}
+
+h4 {
+	font-weight: $font-weight-h4;
+	color: $gray-light;
+}
+
+p {
+	color: $gray-light;
+    font-size: 12pt;
+    line-height: 23px;
+    margin: 0 0 15px 0;
+}
+
+strong {
+	color: $pink-dark;
+}
+
+i.fa span {
+	display: none;
+}
+
+main {
+	text-align: center;
+	padding: 40px 0;
+}
+
+.main-body {
+	margin-top: 25px;
+	margin-bottom: 40px;
+
+	p {
+		margin-bottom: 40px;
+	}
+}
+
+hr {
+	background-color: $gray;
+    height: 3px;
+    width: 70px;
+	margin-bottom: 40px;
+	margin-top: 0;
+}
+
+.btn-primary {
+	background-color: $blue;
+	border-color: $blue;
+}
+
+.row {
+	margin-bottom: 25px;
+}
+
+/* Portfolio */
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+/* Cards */
+.card-deck {
+	margin-bottom: 40px;
+}
+
+.card {
+	border: none;
+	flex-basis: 45% !important;
+}
+
+@media only screen and (min-width: map-get($grid-breakpoints, lg)) {
+	.card {
+		flex-basis: 0% !important;
+	}
+}
+
+/* Icons */
+.fa {
+	color: $blue;
+}
+
+/* Portraits */
+.portrait-col {
+	text-align: center;
+}
+
+.portrait {
+	border: 2px solid $gray-dark; 
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 0 auto 25px;
+}
+
+.portrait img {
+	width: auto;
+	height: 100%;
+	margin-left: -30px;
+}
+
+/* Skill list */
+.skill-list-item {
+	display: flex;
+	background-color: $gray-light;
+	margin-bottom: 10px;
+}
+
+.skill-list-item div.skill {
+	width: 25%;
+	background-color: $blue;
+	color: $white;
+	font-weight: bold;
+	padding-top: 4px;
+	font-size: 11pt;
+}
+
+.skill-list-item .progress {
+	width: 75%;
+	height: 28px;
+	border-radius: 0;
+	font-size: 11pt;
+}
+
+.skill-list-item .progress-bar {
+	background-color: $blue-dark;
+}
+
+/* Global forms */
+.is-valid {
+	border: 1px solid #28a745;
+}
+
+/* Lightbox */
+.ReactModal__Overlay--after-open {
+	z-index: 1100 !important;
+}
+
+/* Rows & Columns */
+.col {
+	margin-bottom: 15px;
+	flex-basis: auto;
+}
