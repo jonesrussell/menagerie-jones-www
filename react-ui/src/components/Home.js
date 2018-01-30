@@ -12,7 +12,10 @@ class Home extends Component {
 	}
 
 	componentDidMount() {
-		const env = runtimeEnv();
+		//const env = runtimeEnv();
+		const env = process.env;
+		console.log(env);
+		console.log(process.env);
 		fetch(env.REACT_APP_API_URL + '/node/2?_format=json')
 			.then(results => {
 				return results.json();
