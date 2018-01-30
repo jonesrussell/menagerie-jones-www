@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import runtimeEnv from '@mars/heroku-js-runtime-env';
 import 'font-awesome/css/font-awesome.min.css';
 
 class About extends Component {
@@ -11,9 +12,8 @@ class About extends Component {
 	};
 
 	componentDidMount() {
-		let host = 'http://live-menagerie-jones.pantheonsite.io';
-		//let host = 'http://192.168.0.116/node';
-		fetch(host + '/node/1?_format=json')
+		const env = runtimeEnv();
+		fetch(env.REACT_APP_API_URL + '/node/1?_format=json')
 			.then(results => {
 				return results.json();
 			})

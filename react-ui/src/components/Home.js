@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import runtimeEnv from '@mars/heroku-js-runtime-env';
 
 class Home extends Component { 
 	constructor() {
@@ -11,15 +12,14 @@ class Home extends Component {
 	}
 
 	componentDidMount() {
-		let host = 'http://live-menagerie-jones.pantheonsite.io';
-		//let host = 'http://192.168.0.116';
-		fetch(host + '/node/2?_format=json')
+		const env = runtimeEnv();
+		fetch(env.REACT_APP_API_URL + '/node/2?_format=json')
 			.then(results => {
 				return results.json();
 			})
 			.then(data => {
 				// Add host to portrait image src, hacky
-				let body = data.body[0].value.replace(/\/sites\//, host + '/sites/');
+				let body = data.body[0].value.replace(/\/sites\//, env.REACT_APP_API_URL + '/sites/');
 				this.setState({
 					title: data.title[0].value,
 					body: body 

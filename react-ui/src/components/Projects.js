@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Badge } from 'reactstrap';
 import $ from 'jquery';
-import './Projects.scss';
 import Lightbox from 'react-image-lightbox';
+import runtimeEnv from '@mars/heroku-js-runtime-env';
+import './Projects.scss';
 
 class Projects extends Component {
 	constructor(props) {
@@ -19,10 +20,8 @@ class Projects extends Component {
 
 	componentDidMount() {
 		let _this = this;
-
-		let host = 'http://live-menagerie-jones.pantheonsite.io';
-//		let host = 'http://192.168.0.116';
-		fetch(host + '/node/3?_format=json')
+		const env = runtimeEnv();
+		fetch(env.REACT_APP_API_URL + '/node/3?_format=json')
 			.then(results => {
 				return results.json();
 			})
@@ -37,16 +36,12 @@ class Projects extends Component {
 					_this.setState({ title: title, body: body });
 			});
 
-
-		fetch(host + '/projects?_format=json')
+		fetch(env.REACT_APP_API_URL + '/projects?_format=json')
 			.then(results => {
 				return results.json();
 			})
 				.then(data => {
 					_this.setState({ projects: data });
-					_this.state.projects.map(function(bar) {
-						return bar;
-					});
 			});
 	}
 
