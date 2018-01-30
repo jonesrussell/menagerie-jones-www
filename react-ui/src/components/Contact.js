@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import runtimeEnv from '@mars/heroku-js-runtime-env';
 
 class Contact extends Component {
 	constructor(props) {
@@ -53,8 +52,7 @@ class Contact extends Component {
 		let data = JSON.stringify(payload);
 		let _this = this;
 
-		const env = runtimeEnv();
-		fetch(env.REACT_APP_API_URL + '/entity/contact_message?_format=json',
+		fetch(process.env.REACT_APP_API_URL + '/entity/contact_message?_format=json',
 			{
 				method: "POST",
 				headers: {

@@ -3,7 +3,6 @@
   "version": "0.1.1",
   "private": true,
   "dependencies": {
-    "@mars/heroku-js-runtime-env": "^3.0.2",
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
