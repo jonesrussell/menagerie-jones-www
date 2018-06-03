@@ -19,6 +19,7 @@ class Menu extends Component {
 			active: {
 				about: path.includes('about'),
 				projects: path.includes('projects'),
+				blog: path.includes('blog'),
 				contact: false
 			}
 		};
@@ -50,6 +51,9 @@ class Menu extends Component {
 							<NavLink active={this.state.active.projects} href="/projects">Projects</NavLink>
 						  </NavItem>
 						  <NavItem>
+							<NavLink active={this.state.active.blog} href="/blog">Blog</NavLink>
+						  </NavItem>
+						  <NavItem>
 							<NavLink active={this.state.active.contact} href="#contact-form"><i className="fa fa-address-card-o" aria-hidden="true"></i></NavLink>
 						  </NavItem>
 						</Nav>
@@ -61,4 +65,4 @@ class Menu extends Component {
 	}
 }
 
-export default Menu 
+export default Menu
