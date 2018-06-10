@@ -77,6 +77,7 @@ class Blog extends Component {
 					<div className="col col-md-12">
 						<h2 dangerouslySetInnerHTML={{__html: post.title}} />
             			<div>
+                            <time dateTime={post.created}>{this.formatDate(post.created)}</time>
     						<span dangerouslySetInnerHTML={{__html: post.body}} />
             			</div>
 					</div>

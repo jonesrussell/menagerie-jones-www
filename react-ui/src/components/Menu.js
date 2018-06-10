@@ -42,7 +42,7 @@ class Menu extends Component {
 					  <Collapse isOpen={this.state.isOpen} navbar>
 						<Nav className="ml-auto" navbar>
 						  <NavItem>
-							<NavLink href="/">Home</NavLink>
+							<NavLink href="/">Russell Jones</NavLink>
 						  </NavItem>
 						  <NavItem>
 							<NavLink active={this.state.active.about} href="/about">About</NavLink>

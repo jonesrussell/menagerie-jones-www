@@ -73,7 +73,7 @@ class Post extends Component {
 				<div className="row post-container">
 					<div className="col col-md-12">
 						<h3>{post.title[0].value}</h3>
-                        <time dateTime="{post.created[0].value}">{this.formatDate(post.created[0].value)}</time>
+                        <time dateTime={post.created[0].value}>{this.formatDate(post.created[0].value)}</time>
             			<div>
                             <span className="intro">
                             </span>
