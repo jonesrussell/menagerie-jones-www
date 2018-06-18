@@ -1,0 +1,113 @@
+/* Post.scss */
+@import './_variables.scss';
+
+main {
+    text-align: left;
+}
+
+article {
+    text-align: left !important;
+}
+
+
+#page-post {
+    h2 {
+        margin-bottom: 8px;
+    }
+
+    time {
+        color: #6c6c6c;
+        font-size: 15px;
+    }
+
+	div:last-child hr {
+		display: none;
+	}
+
+	.row {
+		text-align: left;
+	}
+	
+    .intro {
+        float: left;
+
+        img {
+            max-width: 300px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	img:hover {
+		cursor: zoom-in;
+	}
+
+	.demo {
+		margin-bottom: 5px;
+		strong {
+			padding-right: 11px;
+		}
+	}
+}
+
+/* Blockquote */
+blockquote {
+  background: #ddd;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+    color: #ccc;
+    font-size: 4em;
+    content: close-quote;
+    vertical-align: -0.4em;
+    line-height: 0.1em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+@media only screen and (min-width: map-get($grid-breakpoints, md)) {
+	#page-post {
+
+		.row {
+			margin-bottom: 40px;
+		}
+
+		#post hr {
+			display: none;
+		}
+
+	}
+}
+
+.badge-secondary {
+	background-color: $pink-dark;
+	font-size: 0.4em;
+	position: relative;
+	top: -10px;
+}
+
+.source {
+	position: relative;
+    top: -20px;
+    display: inline-block;
+    margin-right: 5px;
+}
