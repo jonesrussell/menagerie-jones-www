@@ -34,7 +34,6 @@ class Menu extends Component {
 		import('./Menu.scss');
 
 		return (
-			<div>
 				<Navbar color="faded" light expand="md" className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 					<div className="container">
 					  <NavbarToggler onClick={this.toggle} />
@@ -56,9 +55,8 @@ class Menu extends Component {
 					  </Collapse>
 				  </div>
 				</Navbar>
-			</div>
 		);
 	}
 }
 
-export default Menu 
+export default Menu

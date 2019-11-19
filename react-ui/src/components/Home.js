@@ -30,9 +30,7 @@ class Home extends Component {
 
 		return (
 			<div id="page-home" style={{ textAlign: 'center' }}>
-				<div></div>
 				<div dangerouslySetInnerHTML={{__html: this.state.body}} />
-				<div></div>
 			</div>
 		)
 	}

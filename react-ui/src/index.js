@@ -1,44 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import 'jquery'
+import 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from './components/Menu';
 import Main from './components/Main';
-import Contact from './components/Contact'
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import registerServiceWorker from './registerServiceWorker';
+// const pathToRegexp = require('path-to-regexp');
+import pathToRegexp from 'path-to-regexp';
 
-ReactDOM.render((
-	<BrowserRouter>
-	<div class="container">
-  <header>
-		<Switch>
-				<Route component={Menu} />
-		</Switch>
-  </header>
+let keys = [];
+let notHome = pathToRegexp('/:url', keys);
 
-  <nav>
-  </nav>
+ReactDOM.render(
+  <BrowserRouter>
+    <div className='layout-grid'>
+      <header>
+        <Switch>
+          <Route path={notHome} component={Menu} />
+        </Switch>
+      </header>
 
-  <main>
-			<Main />
-			<Switch>
-				<Route component={Contact} />
-			</Switch>
-  </main>
+      <div className='nav'></div>
 
-  <aside>
-  </aside>
+      <main>
+        <Main />
+      </main>
 
-  <footer>
-			<Switch>
-				<Route exact path='/' />
-				<Route component={Footer} />
-			</Switch>
-  </footer>
-</div>
-	</BrowserRouter>
-), document.getElementById('body-container'));
+      <aside></aside>
+
+      <footer>
+        <Switch>
+          <Route path={notHome} component={Contact} />
+          <Route path={notHome} component={Footer} />
+        </Switch>
+      </footer>
+    </div>
+  </BrowserRouter>,
+  document.getElementById('body-container')
+);
 
 registerServiceWorker();
