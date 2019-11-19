@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'jquery'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './components/Home'
 import Menu from './components/Menu';
 import Main from './components/Main';
 import Contact from './components/Contact'
@@ -12,24 +11,34 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render((
 	<BrowserRouter>
-		<div>
-			<Switch>
-				<Route exact path='/' component={Home} />
+	<div class="container">
+  <header>
+		<Switch>
 				<Route component={Menu} />
-			</Switch>
-			<div className="container">
-				<Main />
-			</div>
+		</Switch>
+  </header>
+
+  <nav>
+  </nav>
+
+  <main>
+			<Main />
 			<Switch>
-				<Route exact path='/' />
 				<Route component={Contact} />
 			</Switch>
+  </main>
+
+  <aside>
+  </aside>
+
+  <footer>
 			<Switch>
 				<Route exact path='/' />
 				<Route component={Footer} />
 			</Switch>
-		</div>
+  </footer>
+</div>
 	</BrowserRouter>
 ), document.getElementById('body-container'));
-  
+
 registerServiceWorker();

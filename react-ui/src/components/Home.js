@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class Home extends Component { 
+class Home extends Component {
 	constructor() {
 		super();
 
-		this.state = { 
+		this.state = {
 			title: '',
 			body: ''
 		}
@@ -20,20 +20,22 @@ class Home extends Component {
 				let body = data.body[0].value.replace(/\/sites\//, process.env.REACT_APP_API_URL + '/sites/');
 				this.setState({
 					title: data.title[0].value,
-					body: body 
+					body: body
 				});
 			});
 	}
 
-	render() { 
+	render() {
 		import('./Home.scss');
 
 		return (
 			<div id="page-home" style={{ textAlign: 'center' }}>
+				<div></div>
 				<div dangerouslySetInnerHTML={{__html: this.state.body}} />
+				<div></div>
 			</div>
 		)
-	}	
+	}
 }
 
 export default Home

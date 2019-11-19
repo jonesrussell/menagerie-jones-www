@@ -2,65 +2,65 @@
 @import './_variables.scss';
 
 body {
-	padding-top: 0;
+  padding-top: 0;
 }
 
 #body-container {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background-image: url('./images/home-background.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center; /*centers items on the line (the x-axis by default)*/
-	align-items: center; /*centers items on the cross-axis (y by default)*/
+  background: rgb(0, 25, 31);
+  background: linear-gradient(0deg, rgba(0, 25, 31, 1) 20%, rgba(4, 83, 130, 1) 50%, rgba(73, 180, 201, 1) 90%);
+  display: grid;
+
+  grid-template-areas:
+    'header header header'
+    'nav content side'
+    'footer footer footer';
+
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+
+  height: 100vh;
 }
 
-#page-home {
-	padding-top: 70px;
+h1,
+h2 {
+  color: $white;
 }
-
-h1, h2 { color: $white; }
 
 h1 {
-	font-size: 27pt;
-	line-height: 36pt;
+  font-size: 27pt;
+  line-height: 36pt;
 }
 
 h2 {
-	font-size: 15pt;
-	line-height: 28pt;
+  font-size: 15pt;
+  line-height: 28pt;
 }
 
 p {
-	margin-top: 15px;
+  margin-top: 15px;
 }
 
 strong {
-	color: $pink-dark;
+  color: $pink-dark;
 }
 
 .btn-outline-secondary {
-	font-family: $accent-font; 
-	color: $white;
-	border-color: $white;
-	border-width: 2px;
+  font-family: $accent-font;
+  color: $white;
+  border-color: $white;
+  border-width: 2px;
 }
 
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus {
-	background-color: $blue;
-	border-color: $blue;
+  background-color: $blue;
+  border-color: $blue;
 }
 
 .portrait {
-	margin-top: 25px;
-	border: 2px solid #FFFFFF;
-	margin-left: auto;
-	margin-right: auto;
+  margin-top: 25px;
+  border: 2px solid #ffffff;
+  margin-left: auto;
+  margin-right: auto;
 }
