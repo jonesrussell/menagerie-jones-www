@@ -1,64 +1,64 @@
 /* Contact.scss */
-@import './_variables.scss';
+@import '../scss/variables';
 
 .contact-form-container {
-	background-color: #252934;
-	padding: 20px 0 100px 0;
+  background-color: #252934;
+  padding: 20px 0 100px 0;
 }
 
 .contact-form {
-	color: $blue;
-	width: 80%;
-	margin: 40px auto;
-	text-align: center;
+  color: $blue;
+  width: 80%;
+  margin: 40px auto;
+  text-align: center;
 
-	input,
-	textarea {
-		background-color: $gray-darker;
-		border-radius: 0;
-		border: 1px solid $gray-darker;
-	}
+  input,
+  textarea {
+    background-color: $gray-darker;
+    border-radius: 0;
+    border: 1px solid $gray-darker;
+  }
 
-	h1 {
-		color: #FFF;
-		text-transform: uppercase;
-	}
+  h1 {
+    color: #fff;
+    text-transform: uppercase;
+  }
 
-	hr {
-		background-color: $white;
-	}
+  hr {
+    background-color: $white;
+  }
 
-	p {
-		color: $blue;
-		font-size: 12pt;
-		font-weight: 600;
-		margin: 40px 0;
-	}
+  p {
+    color: $blue;
+    font-size: 12pt;
+    font-weight: 600;
+    margin: 40px 0;
+  }
 
-	textarea {
-		height: 100px;
-	}
+  textarea {
+    height: 100px;
+  }
 
-	a.btn {
-		color: $white;
-		float: right;
-	}
+  a.btn {
+    color: $white;
+    float: right;
+  }
 
-	.contact-form-sent {
-		background-color: $pink-dark;
-		color: $white;
-		padding: 10px 5px;
-	}
+  .contact-form-sent {
+    background-color: $pink-dark;
+    color: $white;
+    padding: 10px 5px;
+  }
 }
 
 @media only screen and (min-width: map-get($grid-breakpoints, sm)) {
-	.contact-form {
-		width: 40%;
-	}
+  .contact-form {
+    width: 40%;
+  }
 }
 
 @media only screen and (min-width: map-get($grid-breakpoints, lg)) {
-	.contact-form {
-		width: 30%;
-	}
+  .contact-form {
+    width: 30%;
+  }
 }

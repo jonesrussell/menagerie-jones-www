@@ -1,0 +1,24 @@
+/**
+ * @file
+ * App.svss - main stylesheet
+ */
+@import './variables';
+@import '~bootstrap/scss/bootstrap.scss';
+@import './hidden.module.scss';
+@import './skip-link.module.scss';
+
+#root {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url('../images/home-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /*centers items on the line (the x-axis by default)*/
+  align-items: center; /*centers items on the cross-axis (y by default)*/
+}

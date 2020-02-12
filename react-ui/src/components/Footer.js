@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Footer.scss';
 
 class Footer extends Component {
 	render() {
-		import('./Footer.scss');
-
 		return (
 			<footer className="py-5">
 			  <div className="container">
@@ -35,4 +34,4 @@ class Footer extends Component {
 	}
 }
 
-export default Footer 
+export default Footer
