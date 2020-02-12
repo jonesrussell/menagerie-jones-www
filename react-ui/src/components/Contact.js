@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import './Contact.scss';
 
 class Contact extends Component {
 	constructor(props) {
@@ -24,7 +25,7 @@ class Contact extends Component {
 		const target = event.target;
 		const value = target.value;
 		const name = target.name;
- 
+
 		this.setState({
 			[name]: value
 		});
@@ -45,7 +46,7 @@ class Contact extends Component {
 	}
 
 	isEmail(value) {
-		return /(.+)@(.+){2,}\.(.+){2,}/.test(value);	
+		return /(.+)@(.+){2,}\.(.+){2,}/.test(value);
 	}
 
 	validateForm() {
@@ -99,14 +100,13 @@ class Contact extends Component {
 				},
 				body: data
 			})
-			.then(function(res){ 
+			.then(function(res){
 				_this.setState({ sent: true });
 				return res.json();
 			})
 	}
 
 	render() {
-		import('./Contact.scss');
 		let name = this.state.name;
 		let email = this.state.email;
 		let message = this.state.message;

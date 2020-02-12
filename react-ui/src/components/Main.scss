@@ -1,31 +1,9 @@
 /* Main.scss */
-@import './_variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto');
+@import '../scss/variables';
 
 /* Global */
 body {
   font-family: $default-font;
-}
-
-header {
-  grid-area: header;
-}
-
-nav {
-  grid-area: nav;
-}
-
-main {
-  grid-area: content;
-}
-
-aside {
-  grid-area: side;
-  margin-right: 0.5rem;
-}
-
-footer {
-  grid-area: footer;
 }
 
 h1 {
@@ -74,6 +52,11 @@ strong {
 
 i.fa span {
   display: none;
+}
+
+main {
+  text-align: center;
+  padding: 40px 0;
 }
 
 .main-body {

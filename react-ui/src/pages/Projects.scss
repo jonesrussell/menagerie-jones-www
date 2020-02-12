@@ -1,0 +1,54 @@
+/* Projects.scss */
+@import '../scss/variables';
+
+#page-projects {
+  div:last-child hr {
+    display: none;
+  }
+
+  .row {
+    text-align: left;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  img:hover {
+    cursor: zoom-in;
+  }
+
+  .demo {
+    margin-bottom: 5px;
+    strong {
+      padding-right: 11px;
+    }
+  }
+}
+
+@media only screen and (min-width: map-get($grid-breakpoints, md)) {
+  #page-projects {
+    .row {
+      margin-bottom: 40px;
+    }
+
+    #projects hr {
+      display: none;
+    }
+  }
+}
+
+.badge-secondary {
+  background-color: $pink-dark;
+  font-size: 0.4em;
+  position: relative;
+  top: -10px;
+}
+
+.source {
+  position: relative;
+  top: -20px;
+  display: inline-block;
+  margin-right: 5px;
+}
