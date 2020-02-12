@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // import App from './App';
-import 'jquery'
+import $ from 'jquery';
 import './scss/App.scss';
 import Home from './pages/Home';
 import Menu from './components/Menu';
